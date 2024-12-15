@@ -10,8 +10,8 @@ source:
 
 build:
   number: 0
-  script: '"${PYTHON}" -m pip install --no-deps .'  # [unix]
-  script: '"%PYTHON%"  -m pip install --no-deps .'  # [win]
+  script: '"${PYTHON}" -m pip install .'  # [unix]
+  script: '"%PYTHON%"  -m pip install .'  # [win]
 
 requirements:
   build:
