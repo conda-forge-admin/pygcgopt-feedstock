@@ -24,8 +24,6 @@ requirements:
     - python  # [build_platform != target_platform]
     - cross-python_{{ target_platform }}  # [build_platform != target_platform]
   host:
-    - scip >=9.2.0
-    - gcg >=3.7.0
     - python
     - pip
     - cython >=3
