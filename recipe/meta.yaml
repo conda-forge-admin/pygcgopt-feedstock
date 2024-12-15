@@ -10,10 +10,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv
-  script_env:
-    - GCGOPTDIR="${PREFIX}"
 
 requirements:
   build:
@@ -22,16 +19,17 @@ requirements:
     - cython                                   # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
   host:
-    - scip >=8.0.0
-    - gcg >=3.5.0
+    - scip >=9.2.0
+    - gcg >=3.7.0
     - python
     - pip
-    - cython >=0.29.21
-    - pyscipopt >=4.0.0
+    - cython >=3.0.0
+    - pyscipopt >=5.2.1
   run:
     - python
-    - pyscipopt >=4.0.0
+    - pyscipopt >=5.2.1
 
 test:
   imports:
