@@ -27,6 +27,7 @@ requirements:
     - scip
     - gcg
     - python
+    - setuptools
     - pip
     - cython >=3
     - pyscipopt >=5.2.1
