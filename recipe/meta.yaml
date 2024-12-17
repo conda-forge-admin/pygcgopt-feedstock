@@ -23,8 +23,6 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
-    - python  # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}  # [build_platform != target_platform]
   host:
     - scip
     - gcg
@@ -33,6 +31,8 @@ requirements:
     - cython >=3
     - pyscipopt >=5.2.1
   run:
+    - scip
+    - gcg
     - python
     - pyscipopt >=5.2.1
 
